@@ -12,7 +12,8 @@ import java.util.*;
 
 public class Main {
     public static boolean isValid(String line) {
-        return line.matches("^\"[^\"]*\"(;\"[^\"]*\")*$");
+        //return line.matches("^\"[^\"]*\"(;\"[^\"]*\")*$");
+        return line.matches("^(\"([^\"]*)\"|)(;(\"([^\"]*)\"|))*$");
     }
 
     private static String find(Map<String, String> parents, String x) {
